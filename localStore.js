@@ -1,7 +1,9 @@
 var localStore = {
+  
   set: function(data, value) {
     localStorage[data] = JSON.stringify(value);
   },
+
   get: function(data) {
     var rawData;
     rawData = localStorage[data];
@@ -10,9 +12,11 @@ var localStore = {
     }
     return JSON.parse(rawData);
   },
+
   exists: function(data) {
     return localStorage[data] != null;
   }
+
 };
 
 module.exports = localStore;
